@@ -47,11 +47,22 @@ $_SESSION['form_token'] = $form_token;
 
 				<input type="hidden" name="form_token" value="<?php echo $form_token; ?>" />
 
-              <button>Signup</button>
+        <button id="button1">Signup</button>
         </div>
     </div>
 </form>
-    <script type="text/javascript">
+
+<script>
+$("#button1").click(function(){
+	var empty =$(this).parent().find("input").filter(function(){
+		return this.value === "";
+	});
+	if(empty.length){
+		alert("Please fill out all fields");
+	}
+	});
+
+</script>    <script type="text/javascript">
 $(function () {
     var user = {}, flg = {};
     init();

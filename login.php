@@ -42,11 +42,23 @@ $_SESSION['form_token'] = $form_token;
 
             <a href="Signup.php"><p id="logint" style="opacity: 1;">Register with Uvote</p></a>
 				<input type="hidden" name="form_token" value="<?php echo $form_token; ?>" />
-
-              <button>Login</button>
+<button id="button1">Login</button>
         </div>
     </div>
 </form>
+
+<script>
+$("#button1").click(function(){
+	var empty =$(this).parent().find("input").filter(function(){
+		return this.value === "";
+	});
+	if(empty.length){
+		alert("Please fill out all fields");
+	}
+	});
+
+</script>
+
     <script type="text/javascript">
 $(function () {
     var user = {}, flg = {};
@@ -127,7 +139,7 @@ $(function () {
         $('#nameal').hide();
         $('#passal').hide();
         $('#student_username, #student_password, #logint, #nameal, #passal, #signupb').css('opacity', '1');
-        $('#student_usernmae').css('background','rgb(255, 255, 255)');
+        $('#student_username').css('background','rgb(255, 255, 255)');
         $('#student_password').css('background','rgb(255, 255, 255)');
         $('#signupb').css('opacity', '0.2').css('cursor', 'default');
         $('#student_username, #student_password').val('');

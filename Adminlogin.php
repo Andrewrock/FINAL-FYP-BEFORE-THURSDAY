@@ -22,7 +22,7 @@ $_SESSION['form_token'] = $form_token;
 </head>
 
 <body>
-<form action="Adminlogin_submit.php" method="post">
+<form action="Adminlogin_submit.php" id="form" method="post">
     <div id="logmsk" style="display: block;">
         <div id="userbox">
             <h1 id="signup" style="background-color: rgb(118, 171, 219); background-position: initial initial; background-repeat: initial initial;">Login</h1>
@@ -41,11 +41,24 @@ $_SESSION['form_token'] = $form_token;
             <p id="passal" style="display: none; opacity: 1;">Password:</p>
 
            				<input type="hidden" name="form_token" value="<?php echo $form_token; ?>" />
-
-              <button>Login</button>
+<button id="button1">Login</button>
         </div>
     </div>
 </form>
+
+<script>
+$("#button1").click(function(){
+	var empty =$(this).parent().find("input").filter(function(){
+		return this.value === "";
+	});
+	if(empty.length){
+		alert("Please fill out all fields");
+	}
+	});
+
+</script>
+
+
     <script type="text/javascript">
 $(function () {
     var user = {}, flg = {};
@@ -75,7 +88,7 @@ $(function () {
     });
 
     $( "#admin_password" ).keyup(function() {
-    var len = $('#student_password').val().length;
+    var len = $('#admin_password').val().length;
     if(len > 10 || len == 0){
     $('#admin_password').css('background','rgb(255, 214, 190)');
     blsp();
@@ -126,7 +139,7 @@ $(function () {
         $('#nameal').hide();
         $('#passal').hide();
         $('#admin_username, #admin_password, #logint, #nameal, #passal, #signupb').css('opacity', '1');
-        $('#admin_usernmae').css('background','rgb(255, 255, 255)');
+        $('#admin_username').css('background','rgb(255, 255, 255)');
         $('#admin_password').css('background','rgb(255, 255, 255)');
         $('#signupb').css('opacity', '0.2').css('cursor', 'default');
         $('#admin_username, #admin_password').val('');

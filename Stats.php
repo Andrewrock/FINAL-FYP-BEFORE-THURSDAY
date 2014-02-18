@@ -23,7 +23,7 @@ $infos = mysql_query("SELECT first_name, last_name, candidate_position FROM voti
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
-
+<link href="css/RegistrationOfCandidates.css" rel="stylesheet">
     <!-- Add custom CSS here -->
     <link href="css/stats.css" rel="stylesheet">
     <link rel="stylesheet" href="css/font-awesome.min.css">
@@ -57,7 +57,7 @@ $infos = mysql_query("SELECT first_name, last_name, candidate_position FROM voti
             <li><a href="SocietyCreate.php"><i class="fa fa-table"></i> Create Election</a></li>
             <li><a href="ReminderEmail.html"><i class="fa fa-edit"></i> Send reminder emails</a></li>
             <li><a href="AdminSignup.php"><i class="fa fa-font"></i> Add Admin</a></li>
-             <li><a href="Results.php"><i class="fa fa-tasks"></i> Results</a></li>
+              <li><a href="Chart.php"><i class="fa fa-tasks"></i> Results</a></li>
             <li><a href="Adminlogout.php"><i class="fa fa-pencil"></i> Logout</a></li>
             </li>
           </ul>
@@ -185,7 +185,9 @@ $infos = mysql_query("SELECT first_name, last_name, candidate_position FROM voti
 				?>
 
 
-
+				<div class="buttons">
+           <a href="FullResultCharts.php"><input type="submit"  value="View most recent results"  id="submit" class="button green center"></a>
+		   </div>
 
 
 

@@ -53,6 +53,7 @@ $results = mysql_query("Select Election_title, election_link from Elections wher
             <li><a href=""><i class="fa fa-tasks"></i> Previous elections</a></li>
             <li><a href="RegisterCandidate.php"><i class="fa fa-pencil"></i> Register as candidate</a></li>
               <li><a href="User.html"><i class="fa fa-desktop"></i> Home</a></li>
+
             <li><a href="logout.php"><i class="fa fa-user"></i> Logout</a></li>
 
             </li>

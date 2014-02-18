@@ -46,8 +46,8 @@
             <li><a href="SocietyCreate.php"><i class="fa fa-table"></i> Create Election</a></li>
             <li><a href="ReminderEmail.html"><i class="fa fa-edit"></i> Send reminder emails</a></li>
             <li><a href="AdminSignup.php"><i class="fa fa-font"></i> Add Admin</a></li>
-             <li><a href="Results.php"><i class="fa fa-tasks"></i> Results</a></li>
-              <li><a href="stats.php"><i class="fa fa-ttechometer"></i> Results</a></li>
+             <li><a href="Chart.php"><i class="fa fa-tasks"></i> Results</a></li>
+
 
 
             <li><a href="Adminlogout.php"><i class="fa fa-pencil"></i> Logout</a></li>
@@ -190,7 +190,7 @@
                   </div>
                 </div>
               </div>
-              <a href="Results.php">
+              <a href="Chart.php">
                 <div class="panel-footer announcement-bottom">
                   <div class="row">
                     <div class="col-xs-6">
